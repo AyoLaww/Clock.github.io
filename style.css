@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Anton&family=Montserrat:wght@400;600;800&family=Outfit:wght@300;400;500;600;700&family=Overpass:wght@400;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Roboto:wght@300&family=Rubik&display=swap');
+:root{
+    --background-color: #311B92;
+    --main-color: #AB47BC;
+    --shadow: #512DA8;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Montserrat';
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
+}
+
+.clock-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25rem;
+    height: 25rem;
+}
+
+.clock-container > #clock{
+    text-shadow: 3px 3px 0px var(--shadow);
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 5rem;
+    pointer-events: none;
+}
+
+footer{
+    position: absolute;
+    bottom: 0px;
+}
+
+footer > .f-container > p{
+    text-align: center;
+    font-weight: 400;
+    color: #AB47BC;
+    text-shadow: 2px 1px 0px var(--shadow);
+}
+
+.clock-container > #clock > span{
+    gap: 0;
+}
+
+.clock-container > #clock > .blinker{
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity: 0;
+    }
+}
